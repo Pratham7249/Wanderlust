@@ -1,0 +1,46 @@
+<% layout("layouts/boilerplate") %>
+
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+        <h1>Login</h1>
+        <form action="/login" method="post" class="needs-validation" nonvalidate>
+            <div class="col-md-4">
+                <label for="title" class="form-label">Username</label>
+                <input name='Username' placeholder='Enter the Username' type="text" required class="form-control">
+                <div class="invalid-feedback">Enter your Username.</div>
+            </div>
+            
+            <div class="col-md-4">
+                <label for="Password" class="form-label">Password</label>
+                <input name='Password' placeholder='Enter the Password' type="password" required class="form-control">
+                <div class="invalid-feedback">Enter your password.</div>
+            </div>
+            <button  class="btn btn-dark">Login</button>
+
+
+        </form>
+
+
+    </div>
+</div>
+<script>
+    (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>
