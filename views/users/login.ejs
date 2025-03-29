@@ -7,16 +7,20 @@
         <form action="/login" method="post" class="needs-validation" nonvalidate>
             <div class="col-md-4">
                 <label for="title" class="form-label">Username</label>
-                <input name='Username' placeholder='Enter the Username' type="text" required class="form-control">
+                <input name='username' placeholder='Enter the Username' type="text" required class="form-control">
+
                 <div class="invalid-feedback">Enter your Username.</div>
             </div>
             
             <div class="col-md-4">
                 <label for="Password" class="form-label">Password</label>
-                <input name='Password' placeholder='Enter the Password' type="password" required class="form-control">
+                <input name='password' placeholder='Enter the Password' type="password" required class="form-control">
+
                 <div class="invalid-feedback">Enter your password.</div>
             </div>
             <button  class="btn btn-dark">Login</button>
+            <a href="/signup" class="btn btn-secondary">Sign Up</a> <!-- Sign-up button added -->
+
 
 
         </form>
