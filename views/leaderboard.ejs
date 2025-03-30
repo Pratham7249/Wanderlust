@@ -1,0 +1,106 @@
+<% if (cityWasteManagementRanking && cityWasteManagementRanking.length > 0) { %>
+<% if (cityWasteManagementRanking && cityWasteManagementRanking.length > 0) { %>
+<% if (cityWasteManagementRanking && cityWasteManagementRanking.length > 0) { %>
+  <%- layout("layouts/boilerplate") %>
+<% } else { %>
+  <h1>No data available for the leaderboard.</h1>
+<% } %>
+
+<% } else { %>
+  <h1>No data available for the leaderboard.</h1>
+<% } %>
+
+<% } else { %>
+  <h1>No data available for the leaderboard.</h1>
+<% } %>
+
+
+<div class="container mt-5">
+  <h1>Top Waste Management Cities</h1>
+  <p class="lead">Leaderboard based on government data.</p>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>City</th>
+      </tr>
+    </thead>
+  <tbody>
+    <% if (cityWasteManagementRanking && cityWasteManagementRanking.length > 0) { %>
+      <% cityWasteManagementRanking.forEach(cityData => { %>
+
+
+
+        <tr>
+          <td><%= cityData.rank ? cityData.rank : 'N/A' %></td>
+          <td><%= cityData.city %></td>
+        </tr>
+      <% }); %>
+    <% } else { %>
+      <tr>
+        <td colspan="2">No data available.</td>
+      </tr>
+    <% } %>
+    <% } else { %>
+      <tr>
+        <td colspan="2">No data available.</td>
+      </tr>
+    <% } %>
+    <% } else { %>
+      <tr>
+        <td colspan="2">No data available.</td>
+      </tr>
+    <% } %>
+    </tbody>
+
+
+
+  </table>
+
+  <div class="mt-4">
+      <canvas id="myChart"></canvas> <!-- Add this canvas element -->
+
+    <img src="/images/your_image.jpg" alt="Waste Sorting Bins" class="img-fluid rounded">
+    <p class="mt-2">Image showing different bins for compost, waste, and recycling.</p>
+  </div>
+</div>
+
+    <script>
+        // <block:setup:1>
+        const labels = Utils.months({count: 7}); // You might want to replace this with actual month names or time periods
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First Dataset', // Change this to a relevant label (e.g., 'Waste Segregation Rate')
+                data: [65, 59, 80, 81, 56, 55, 40], // Replace this with your actual waste management data for the last 7 periods
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }]
+        };
+        // </block:setup>
+
+        // <block:config:0>
+        const config = {
+            type: 'line',
+            data: data,
+            options: { // Optional: Add chart options here (e.g., title, scales)
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Trend of Waste Management Parameter' // Customize the title
+                    }
+                }
+            }
+        };
+        // </block:config>
+
+        // Create the chart
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, config);
+
+        console.log("Leaderboard page loaded.");
+    </script>
