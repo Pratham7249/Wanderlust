@@ -1,31 +1,31 @@
 <!-- Use the boilerplate layout -->
 
+<h1 style="text-align: center; margin-bottom: 20px; color: #28a745;">Recycling Initiative</h1>
 
-<h1>Recycling Initiative</h1>
+<form class="row g-3" style="font-family: sans-serif; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;">
 
-<form class="row g-3">
     <div class="col-md-6">
-        <label for="inputName" class="form-label">Your Name</label>
+        <label for="inputName" class="form-label" style="font-weight: bold; margin-top: 10px;">Your Name</label>
         <input type="text" class="form-control" id="inputName" placeholder="Your Full Name">
     </div>
     <div class="col-md-6">
-        <label for="inputPhone" class="form-label">Phone Number</label>
+        <label for="inputPhone" class="form-label" style="font-weight: bold; margin-top: 10px;">Phone Number</label>
         <input type="tel" class="form-control" id="inputPhone" placeholder="Contact Number">
     </div>
     <div class="col-12">
-        <label for="inputAddress" class="form-label">Address</label>
+        <label for="inputAddress" class="form-label" style="font-weight: bold; margin-top: 10px;">Address</label>
         <input type="text" class="form-control" id="inputAddress" placeholder="House number and street name">
     </div>
     <div class="col-12">
-        <label for="inputAddress2" class="form-label">Address 2 (Optional)</label>
+        <label for="inputAddress2" class="form-label" style="font-weight: bold; margin-top: 10px;">Address 2 (Optional)</label>
         <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
     </div>
     <div class="col-md-6">
-        <label for="inputCity" class="form-label">City</label>
+        <label for="inputCity" class="form-label" style="font-weight: bold; margin-top: 10px;">City</label>
         <input type="text" class="form-control" id="inputCity">
     </div>
     <div class="col-md-4">
-        <label for="inputState" class="form-label">State/Union Territory</label>
+        <label for="inputState" class="form-label" style="font-weight: bold; margin-top: 10px;">State/Union Territory</label>
         <select id="inputState" class="form-select">
             <option selected>Choose...</option>
             <option value="AN">Andaman and Nicobar Islands</option>
@@ -67,11 +67,11 @@
         </select>
     </div>
     <div class="col-md-2">
-        <label for="inputZip" class="form-label">Zip Code</label>
+        <label for="inputZip" class="form-label" style="font-weight: bold; margin-top: 10px;">Zip Code</label>
         <input type="text" class="form-control" id="inputZip">
     </div>
     <div class="col-12">
-        <label for="wasteType" class="form-label">Type of Waste</label>
+        <label for="wasteType" class="form-label" style="font-weight: bold; margin-top: 10px;">Type of Waste</label>
         <select id="wasteType" class="form-select" multiple aria-label="Multiple select example">
             <option value="paper">Paper</option>
             <option value="plastic">Plastic</option>
@@ -84,19 +84,19 @@
         <div class="form-text">Select all that apply. Hold down Ctrl (or Cmd on Mac) to select multiple options.</div>
     </div>
     <div class="col-12">
-        <label for="otherWaste" class="form-label">Other Waste (If selected above)</label>
+        <label for="otherWaste" class="form-label" style="font-weight: bold; margin-top: 10px;">Other Waste (If selected above)</label>
         <textarea class="form-control" id="otherWaste" rows="2" placeholder="Specify other types of waste here"></textarea>
     </div>
     <div class="col-md-4">
-        <label for="quantity" class="form-label">Approximate Quantity (in kg)</label>
+        <label for="quantity" class="form-label" style="font-weight: bold; margin-top: 10px;">Approximate Quantity (in kg)</label>
         <input type="number" class="form-control" id="quantity" min="1" value="1">
     </div>
     <div class="col-md-8">
-        <label for="pickupDate" class="form-label">Preferred Pickup Date</label>
+        <label for="pickupDate" class="form-label" style="font-weight: bold; margin-top: 10px;">Preferred Pickup Date</label>
         <input type="date" class="form-control" id="pickupDate">
     </div>
     <div class="col-12">
-        <div class="form-check">
+        <div class="form-check" style="margin-top: 15px;">
             <input class="form-check-input" type="checkbox" id="agreement">
             <label class="form-check-label" for="agreement">
                 I agree to the terms and conditions for waste recycling.
@@ -104,6 +104,6 @@
         </div>
     </div>
     <div class="col-12">
-        <button type="submit" class="btn btn-primary">Submit Recycling Request</button>
+        <button type="submit" class="btn btn-primary" style="background-color: #28a745; border-color: #28a745;">Submit Recycling Request</button>
     </div>
 </form>
